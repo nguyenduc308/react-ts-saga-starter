@@ -10,3 +10,11 @@ export const FormAuthWrapper = styled.div`
     max-width: 400px;
     margin-top: 50px;
 `;
+export const FromAuthFooterWrapper = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a {
+        color: #333;
+    }
+`;

@@ -3,11 +3,17 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
 import { IRegisterRequest } from 'models/auth.model';
-import { AuthPageWrapper, FormAuthWrapper } from 'containers/auth/form-auth.styled';
+import {
+    AuthPageWrapper,
+    FormAuthWrapper,
+    FromAuthFooterWrapper,
+} from 'containers/auth/form-auth.styled';
 
 import inputStyle from 'styles/util-modules/input.module.scss';
 import buttonStyle from 'styles/util-modules/button.module.scss';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
+import { LOGIN } from 'constants/paths';
 
 interface IRegisterProps {}
 
@@ -68,9 +74,14 @@ const Register: React.FunctionComponent<IRegisterProps> = () => {
                             autoComplete="off"
                         />
                     </div>
-                    <button className={buttonStyle.btn_primary} type="submit">
-                        Đăng ký
-                    </button>
+                    <FromAuthFooterWrapper>
+                        <div>
+                            <Link to={LOGIN}>Login</Link>
+                        </div>
+                        <button className={buttonStyle.btn_primary} type="submit">
+                            Đăng ký
+                        </button>
+                    </FromAuthFooterWrapper>
                 </form>
             </FormAuthWrapper>
         </AuthPageWrapper>
