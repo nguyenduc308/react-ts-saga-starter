@@ -1,8 +1,7 @@
 import { TOKEN_KEY } from 'constants/globalConstants';
-import Register from 'containers/register/register.component';
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { Route, Switch } from 'react-router-dom';
+import AppRoutes from 'routes';
 import { appStored } from 'services';
 import { verifyTokenAction } from 'store/actions/auth.action';
 
@@ -15,12 +14,10 @@ const App: React.FC<IAppProps> = () => {
         if (token) {
             dispatch(verifyTokenAction(token));
         }
-    }, [token]);
+    }, [token, dispatch]);
     return (
         <React.Fragment>
-            <Switch>
-                <Route path="/register" component={Register} />
-            </Switch>
+            <AppRoutes />
         </React.Fragment>
     );
 };

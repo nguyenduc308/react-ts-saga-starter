@@ -1,4 +1,4 @@
-import { AUTH_FAILED, AUTH_SUCCESS } from 'store/actionTypes/auth';
+import { AUTH_SUCCESS } from 'store/action-types/auth';
 
 const initialState = {};
 const authReducer = (state = initialState, action: ActionRedux) => {

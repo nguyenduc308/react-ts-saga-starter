@@ -1,2 +1,2 @@
-export { default as http } from './httpService';
-export { default as appStored } from './localStorageService';
+export { default as http } from './http.service';
+export { default as appStored } from './local-storage.service';

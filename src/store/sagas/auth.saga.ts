@@ -1,6 +1,6 @@
 import { loginApi } from 'apis/auth-api';
 import { call, put, takeLatest } from 'redux-saga/effects';
-import { LOGIN, AUTH_SUCCESS, AUTH_FAILED, VERIFY_TOKEN } from 'store/actionTypes/auth';
+import { LOGIN, AUTH_SUCCESS, AUTH_FAILED, VERIFY_TOKEN } from 'store/action-types/auth';
 
 function* loginFlow(action: ActionRedux) {
     try {
